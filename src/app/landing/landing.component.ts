@@ -12,12 +12,12 @@ import { DashboardComponent } from "../dashboard/dashboard.component";
 })
 export class LandingComponent implements OnInit{
   constructor(private router: Router){}
-  // redirectToLogin(){
-  //   this.router.navigate(['/login']);
-  // }
-  // redirectToSignup(){
-  //   this.router.navigate(['/signup']);
-  // }
+  redirectToLogin(){
+    this.router.navigate(['/login']);
+  }
+  redirectToSignup(){
+    this.router.navigate(['/signup']);
+  }
    goToDashboard(){
     this.router.navigate(['/dashboard']);
   }

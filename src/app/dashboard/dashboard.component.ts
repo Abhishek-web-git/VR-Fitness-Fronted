@@ -11,6 +11,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class DashboardComponent {
   isMenuOpen = false;
+features: any;
+programs: any;
+steps: any;
+testimonials: any;
 
   toggleMenu(){
     this.isMenuOpen = !this.isMenuOpen;
@@ -19,4 +23,5 @@ export class DashboardComponent {
       menu.classList.toggle('show',this.isMenuOpen);
     }
   }
+  
 }

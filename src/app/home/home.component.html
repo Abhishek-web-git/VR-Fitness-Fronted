@@ -1,0 +1,52 @@
+<div class="hero-section">
+    <h1>Transform Your Fitness Experience</h1>
+    <p>Achieve your goals with immersive VR fitness sessions and personalized training plans.</p>
+    <button class="vr-button">Get Started</button>
+  </div>
+  
+  <section class="programs-section">
+    <h2>Our Programs</h2>
+    <div class="programs-container">
+      <div *ngFor="let program of programs" class="program-card">
+        <img [src]="program.img" alt="{{ program.title }}" />
+        <h3>{{ program.title }}</h3>
+        <p>{{ program.description }}</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="features-section">
+    <h2>Features</h2>
+
+    <ul>
+      <li *ngFor="let feature of features">
+        <i class="fas fa-check-circle"></i> {{ feature }}
+      </li>
+    </ul>
+    <div class="feature-item">
+        <img src="images/personal Trainer.png" alt="Personalized Workouts">
+        <h3>Personalized Workouts</h3>
+        <p>Custom training programs designed just for you.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-item">
+        <p>“This VR fitness app transformed my workouts! It’s engaging and keeps me motivated.”</p>
+        <span>- Abhishek, Fitness Model</span>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2024 VR Fitness Management. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="#"><img src="images/face logo.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter logo.png" alt="Twitter"></a>
+        <a href="#"><img src="images/insta logo.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+
+
+  

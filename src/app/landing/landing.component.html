@@ -1,16 +1,17 @@
-
 <div *ngIf="showWelcomeScreen" class="welcome-screen">
   <h1>Welcome to VR Fitness</h1>
-  <p>Your immersive fitness journey begins here</p>
+  <p>Your immersive fitness journey begins here.</p>
+  <!-- <button class="cta-button">Get Started</button>  -->
 </div>
+
 <div class="hero">
   <div *ngIf="!showWelcomeScreen" class="landing-content">
-
-  <div class="hero-content">
-    <h1>Transform Your Fitness Journey with VR</h1>
-    <p>Experience immersive workouts and track real-time progress with our VR-based fitness system.</p>
-    <button (click)="goToDashboard()" class="cta-button">Get Started</button>
-    <button class="cta-button secondary">Learn More</button>
+    <div class="hero-content">
+      <h1>Transform Your Fitness Journey with VR</h1>
+      <p>Experience immersive workouts and track real-time progress with our VR-based fitness system.</p>
+      <button (click)="goToDashboard()" class="cta-button">Get Started</button>
+      <button class="cta-button secondary">Learn More</button>
+    </div>
   </div>
 </div>
 
@@ -50,12 +51,10 @@
 <!-- Footer Section -->
 <footer>
   <div class="footer-content">
-    <p>&copy; 2024 VR Fitness Training. All rights reserved.This website create my all team memeber's.</p>
+    <p>&copy; 2024 VR Fitness Training. All rights reserved. This website was created by all team members.</p>
     <ul class="footer-links">
       <li><a href="#">Privacy Policy</a></li>
       <li><a href="#">Terms of Service</a></li>
     </ul>
   </div>
 </footer>
-
-
