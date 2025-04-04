@@ -1,58 +1,13 @@
 /* General Styles */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/VR-fittness-app.webp') no-repeat center center fixed;
+  background: linear-gradient(rgba(41, 127, 138, 0.8), rgba(0, 0, 0, 0.8)), url('C:/Users/krabh/OneDrive/Desktop/Angular/vr-fitness/public/images/VR-fittness-app.webp') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* Welcome Screen */
-.welcome-screen {
-  display: flex; /* Center content flexibly */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  padding: 120px 20px;
-  background: rgba(0, 0, 0, 0.8) url('/assets/VR-fittness-app.webp') no-repeat center center;
-  background-size: cover;
-  border-radius: 20px;
-  margin: 50px auto;
-  width: 80%;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth appearance */
-  opacity: 0; /* Start hidden for animation */
-  animation: fadeIn 1s forwards; /* Animation to fade in */
-}
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* Fade to visible */
-  }
-}
-
-.welcome-screen:hover {
-  transform: translateY(-5px); /* Slightly lift on hover */
-}
-
-.welcome-screen h1 {
-  font-size: 3.8em;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
-  color: #ff5722; /* Bright accent color */
-  transition: transform 0.3s;
-}
-.welcome-screen h1:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.welcome-screen p {
-  font-size: 1.6em;
-  margin-bottom: 30px;
-  text-align: center; /* Center text */
-  color: #fff; /* Keep text color white for readability */
-  max-width: 600px;
-}
 
 /* Hero Section */
 .hero {
@@ -61,19 +16,23 @@ body {
   justify-content: center;
   height: 100vh; /* Full viewport height */
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(246, 243, 243, 0.6);
   padding: 40px;
+  background: rgba(0, 0, 0, 0.8) url('C:/Users/krabh/OneDrive/Desktop/Angular/vr-fitness/public/images/wp9611329.webp') no-repeat center center;
+
+  
 }
 
 .hero-content h1 {
   font-size: 3em;
   margin-bottom: 25px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 10px rgba(247, 243, 243, 0.996);
 }
 
 .hero-content p {
   font-size: 1.4em;
   margin-bottom: 40px;
+  text-shadow: #fff;
 }
 
 /* Buttons */
@@ -105,46 +64,6 @@ body {
   background-color: rgba(255, 87, 34, 0.1);
 }
 
-/* Features, How It Works, and Testimonials Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin: 30px 0;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-  font-size: 2.8em;
-  margin-bottom: 25px;
-  color: #ff5722;
-}
-
-.feature-items, .steps, .testimonial-items {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.feature-item, .step, .testimonial-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 25px;
-  margin: 15px;
-  width: 320px; /* Fixed width for items */
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-item:hover, .step:hover, .testimonial-item:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.testimonial-item {
-  font-style: italic;
-}
 
 /* Footer Section */
 footer {

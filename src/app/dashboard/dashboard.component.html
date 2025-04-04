@@ -1,135 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VRFitness</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <style>
-    /* Background styling for the main container */
-    body {
-      font-family: Arial, sans-serif;
-      background: url('your-gym-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Fitness Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0c0c0c;
+            color: #fff;
+        }
 
-    /* Navbar styling */
-    .navbar-inverse {
-      background-color: rgba(0, 0, 0, 0.8);
-      border: none;
-    }
-    .navbar-inverse .navbar-brand,
-    .navbar-inverse .navbar-nav > li > a {
-      color: #fff !important;
-      font-weight: bold;
-    }
-    .navbar-inverse .navbar-nav > .active > a {
-      background-color: #ff5722 !important;
-      color: #fff !important;
-    }
-    .navbar-nav > li > a:hover {
-      color: #ff5722 !important;
-    }
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #ff0000, #ff7300);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 15px 30px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Footer styling */
-    footer {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px 0;
-      text-align: center;
-      color: #fff;
-      margin-top: 50px;
-    }
-    footer .footer-content p {
-      margin: 0;
-      font-size: 14px;
-    }
-    footer .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-    }
-    footer .footer-links li {
-      display: inline;
-      margin: 0 10px;
-    }
-    footer .footer-links a {
-      color: #ff5722;
-      text-decoration: none;
-    }
-    footer .footer-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff !important;
+            transition: 0.3s;
+
+        }
+
+        .navbar a {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .btn-login {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        /* Hero Section */
+        .carousel-item img {
+            height: 85vh;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .carousel-caption {
+            text-align: center;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .carousel-caption .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* Features Section */
+        .features {
+            background: #1a1a1a;
+            color: #ff7300;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .features .icon {
+            font-size: 3rem;
+            color: #ff0000;
+            margin-bottom: 15px;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .programs h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .programs .card {
+            border: none;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+        }
+
+        .programs .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .programs .card img {
+            border-radius: 5px 5px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .programs .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">VR Fitness</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Why Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <!-- <li><a routerLink="/signup" class="glyphicon glyphicon-user"> Sign Up</a></li>
+              <li><a routerLink="/login" class="glyphicon glyphicon-log-in"> Login</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header"> 
-      <a class="navbar-brand" href="#">
-        <img src="images/vr-logo-png.jpg" alt="Avatar Logo" class="logo-img rounded-pill">
-      </a>
+    <!-- Hero Section -->
+    <div id="gymCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images\front.jpg" class="d-block w-100" alt="Welcome">
+                <div class="carousel-caption">
+                    <h1>Transform Your Body</h1>
+                    <p>Join the best gym in town and push your limits</p>
+                    <a href="/signup" class="btn btn-danger">Get Starts</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/workout-plans">Workout Plans</a></li>
-      <li><a routerLink="/vr-session">VR Session</a></li>
-      <li><a routerLink="/contact">Contact Us</a></li>
-      <li><a routerLink="/about">About</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
 
-<!-- Features Section -->
-<section class="features">
-  <h2>Features</h2>
-  <div class="feature-items">
-    <div class="feature-item" *ngFor="let feature of features">
-      <h3>{{ feature.title }}</h3>
-      <p>{{ feature.description }}</p>
-    </div>
-  </div>
-</section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-dumbbell icon"></i>
+                    <h5>State-of-the-Art Equipment</h5>
+                    <p>Top-quality fitness gear for every workout.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-users icon"></i>
+                    <h5>Expert Trainers</h5>
+                    <p>Certified trainers to guide you every step.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-heartbeat icon"></i>
+                    <h5>Personalized Plans</h5>
+                    <p>Customized workout & diet plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- How It Works Section -->
-<section class="how-it-works">
-  <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step" *ngFor="let step of steps">
-      <h3>{{ step.title }}</h3>
-      <p>{{ step.description }}</p>
-    </div>
-  </div>
-</section>
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images\yoga.jpg" alt="Yoga Training">
+                        <div class="card-body">
+                            <h5 class="card-title">Yoga Training</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images\cardioBlast.avif" alt="Cardio Fitness">
+                        <div class="card-body">
+                            <h5 class="card-title">Cardio Fitness</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="images\fullbody.avif" alt="Full Body Workout">
+                    <div class="card-body">
+                      <h5 class="card-title">Full Body Workout with VR</h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
-  <h2>What Our Users Say</h2>
-  <div class="testimonial-items">
-    <div class="testimonial-item" *ngFor="let testimonial of testimonials">
-      <p>"{{ testimonial.feedback }}"</p>
-      <h4>– {{ testimonial.user }}</h4>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ultimate Fitness. All rights reserved.</p>
+    </footer>
 
-
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2024 VR Fitness Training. All rights reserved. This website was created by all team members.</p>
-    <ul class="footer-links">
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Service</a></li>
-    </ul>
-  </div>
-</footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

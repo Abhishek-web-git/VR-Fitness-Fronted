@@ -1,9 +1,68 @@
-<!-- workout-summary.component.html -->
-<div class="summary-card">
-    <h3>Workout Summary</h3>
-    <p>Total Workouts: {{ summary.totalWorkouts }}</p>
-    <p>Calories Burned: {{ summary.caloriesBurned }}</p>
-    <p>Active Days: {{ summary.activeDays }}</p>
-    <p>Current Streak: {{ summary.currentStreak }} days</p>
-  </div>
+<div class="workout-container">
+  <h2>Workout Plans</h2>
+  <form (ngSubmit)="addWorkout()">
+    <input type="text" [(ngModel)]="newWorkout.name" name="name" placeholder="Workout Name" required>
+    <input type="number" [(ngModel)]="newWorkout.duration" name="duration" placeholder="Duration (min)" required>
+    
+    <label for="category">Select Category:</label>
+    <select id="category" [(ngModel)]="newWorkout.category" name="category" required>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+    
+    <label for="goal">Select Goal:</label>
+    <select id="goal" [(ngModel)]="newWorkout.goal" name="goal" required>
+      <option *ngFor="let goal of goals" [value]="goal">{{ goal }}</option>
+    </select>
+    
+    <label for="level">Select Level:</label>
+    <select id="level" [(ngModel)]="newWorkout.level" name="level" required>
+      <option *ngFor="let level of levels" [value]="level">{{ level }}</option>
+    </select>
+    
+    <button type="submit">Add Workout</button>
+  </form>
+
+  <h3>Workout History</h3>
+  <ul>
+    <li *ngFor="let workout of workouts">
+      {{ workout.date }} - {{ workout.name }} - {{ workout.duration }} min ({{ workout.category }}) - Goal: {{ workout.goal }} - Level: {{ workout.level }} - Calories Burned: {{ workout.caloriesBurned }}
+    </li>
+  </ul>
+
+  <h3>Achievements & Rewards</h3>
+  <ul>
+    <li *ngFor="let achievement of achievements">{{ achievement }}</li>
+  </ul>
+
+  <h3>Leaderboard</h3>
+  <ul>
+    <li *ngFor="let user of leaderboard">{{ user.name }} - {{ user.points }} Points</li>
+  </ul>
   
+  <ul>
+    <li *ngFor="let workout of workouts">
+      {{ workout.name }} - {{ workout.duration }} min ({{ workout.category }}) - Goal: {{ workout.goal }} - Level: {{ workout.level }}
+    </li>
+  </ul>
+
+  <h2>Exercise Library</h2>
+  <input type="text" placeholder="Search Exercises..." (input)="filterExercises($event)">
+  <ul>
+    <li *ngFor="let exercise of filteredExercises">
+      <h3>{{ exercise.name }}</h3>
+      <p>{{ exercise.description }}</p>
+      <p>Duration: {{ exercise.duration }} min</p>
+      <p>Difficulty: {{ exercise.difficulty }}</p>
+      <p>Category: {{ exercise.category }}</p>
+      <div *ngIf="exercise.vrAnimationUrl">
+        <a [href]="exercise.vrAnimationUrl" target="_blank">View VR Animation</a>
+      </div>
+      <div *ngIf="exercise.model3DUrl">
+        <a [href]="exercise.model3DUrl" target="_blank">View 3D Model</a>
+      </div>
+      <div *ngIf="exercise.vrGuideUrl">
+        <a [href]="exercise.vrGuideUrl" target="_blank">Real-time VR Trainer Guide</a>
+      </div>
+    </li>
+  </ul>
+</div>
